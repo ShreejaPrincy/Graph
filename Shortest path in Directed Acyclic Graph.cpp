@@ -9,6 +9,11 @@ Space Complexity: O(V + E)
 Adjacency list + visited array + stack + distance array.
 */
 
+/*
+Topo order guarantees parent comes before child.
+So source will come before all reachable nodes.
+Unreachable nodes may come anywhere, but dist = INF so skip them.
+  */
 class Solution {
   public:
     void dfs(int node, vector<bool>& vis,
